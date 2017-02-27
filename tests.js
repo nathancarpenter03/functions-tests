@@ -48,14 +48,14 @@ function convertCaseUpper(word) {
 
 avow('convertCaseUpper returns an uppercase string', convertCaseUpper('i am shouting!') === 'I AM SHOUTING!');
 
-function repeatWord(word) {
-    return word.repeat(2);
+function repeatWord(word, numRepeat) {
+    return word.repeat(numRepeat);
 }
 
 avow('repeatWord returns a repeated word', repeatWord('Knock.', 2) === 'Knock.Knock.');
 
-function sliceWord(word) {
-    return word.slice(7,12);
+function sliceWord(word, start, end) {
+    return word.slice(start, end);
 }
 
 avow('sliceWord returns a slice of a word', sliceWord('I love pizza!', 7, 12) === 'pizza');
@@ -112,8 +112,8 @@ function isDivisibleByThree(value) {
 
 avow('isDivisibleByThree returns true if number is divisible by 3', isDivisibleByThree(9) === true);
 
-function makeRandomNumber(min, max) {
-    return Math.random(min, max);
+function makeRandomNumber() {
+    return Math.random()*10;
 }
 
 avow('makeRandomNumber returns a random number between 0 and 10', makeRandomNumber(10) >= 0 && makeRandomNumber(10) <= 10);
